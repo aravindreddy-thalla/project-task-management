@@ -1,28 +1,22 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
 
-// Firebase configuration keys
-// NOTE: Replace these dummy/placeholder config properties with your actual 
-// Firebase project configuration values from the Firebase Console (Console -> Project Settings -> General -> Web Apps)
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDummyKeyHere-ReplaceWithYourActualKey",
-  authDomain: "aifagen-intelligence-task.firebaseapp.com",
-  projectId: "aifagen-intelligence-task",
-  storageBucket: "aifagen-intelligence-task.appspot.com",
-  messagingSenderId: "123456789012",
-  appId: "1:123456789012:web:abcd1234efgh5678"
+  apiKey: "AIzaSyBC9ZB6dhTCeCrfCiayDzYri5D52tUP5IY",
+  authDomain: "project-task-management-31978.firebaseapp.com",
+  projectId: "project-task-management-31978",
+  storageBucket: "project-task-management-31978.firebasestorage.app",
+  messagingSenderId: "485299551625",
+  appId: "1:485299551625:web:c63a8715ed4178a4a9f558",
+  measurementId: "G-L6R7Q3HJBE"
 };
 
-// Initialize Firebase App
 const app = initializeApp(firebaseConfig);
 
-// Initialize Services
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 
-// Check if config has been customized
-export const isFirebaseConfigured = 
-  firebaseConfig.apiKey !== "AIzaSyDummyKeyHere-ReplaceWithYourActualKey" && 
+export const isFirebaseConfigured =
   firebaseConfig.apiKey.trim() !== "";
-
